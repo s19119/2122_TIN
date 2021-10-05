@@ -1,0 +1,22 @@
+h1 {
+	font-family: arial;
+	font-size: 30px;
+}
+
+p {
+	font-family: "Courier New";
+	font-size: 20px;
+}
+
+table, th, td {
+	border-collapse: collapse;
+	border: 1px solid purple;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: square;
+}
