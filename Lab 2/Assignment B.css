@@ -1,0 +1,32 @@
+input {
+	font-family: "Lucida handwriting";
+	font-style: italic;
+	font-size: 15px;
+	border-color: green;
+}
+
+input:required {
+	border-color: red;
+}
+
+label {
+	font-family: Arial;
+	font-style: normal;
+	font-size: 20px;
+}
+
+p {
+	font-family: Arial;
+	font-style: normal;
+	font-size: 20px;
+}
+
+select {
+	font-family: "Lucida handwriting";
+	font-size: 20px;
+}
+
+textarea {
+	font-family: Arial;
+	font-size: 20px;
+}

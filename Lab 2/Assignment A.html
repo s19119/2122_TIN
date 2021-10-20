@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="Assignment B.css">
+	</head>
+	<body>
+		<h1>Web page with forms </h1>
+		<form>
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" required><br>
+			
+			<label for="psswd">Password:</label>
+			<input type="password" id="psswd" name="psswd" required><br>
+			
+			<label for="chbox">Remember user:</label>
+			<input type="checkbox" id="chbox" name="chbox">
+			
+			<p>Select your favourite mode of transport:</p>	
+			<label for="plane">Plane</label>
+			<input type="radio" id="plane" name="favtransport" value="plane"><br>
+				
+			<label for="train">Train</label>
+			<input type="radio" id="train" name="favtransport" value="train"><br>
+				
+			<label for="car">Car</label>
+			<input type="radio" id="car" name="favtransport" value="car"><br>
+			
+			<label for="pets">Choose your favourite pet: </label>
+			<select name="pets" id="pets">
+				<option value="dog">Dog</option>
+				<option value="cat">Cat</option>
+				<option value="hamster">Hamster</option>
+			</select><br>
+			
+			<textarea name="intro" rows="5" cols="20">Write something about yourself.</textarea><br>			
+			
+			<button type="submit" value="Submit">Submit</button>
+			<button type="reset" value="Reset">Reset</button>
+		</form>
+	</body>
+</html>
