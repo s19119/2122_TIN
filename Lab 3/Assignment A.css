@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.flex-maincontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+	.flex-maincontainer {
+		display: flex;
+		flex-direction: row;		
+		justify-content: center;
+		align-items: center;
+	}	
+	
+	aside {
+		order: 3;
+	}
+  
+	.flex-article{
+		order: 2;
+		column-count: 1;
+	}
+}
+
+header {
+	text-align: center;
+	font-family: 'Zen Antique Soft', serif;
+	font-size: 56px;
+	flex-grow: 4;
+}
+
+.headerimg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+	box-shadow: 10px 10px 5px grey;
+	width: 50%;
+	height: 50%;
+	transform: rotate(5deg);
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+aside {
+	margin: 10px;
+}
+
+.galleryimg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 250px;
+	max-height: 250px;
+}
+
+figure {
+	border: 1px black dashed;
+	padding: 2px;
+	margin: 5px;
+}
+
+figcaption {
+	color: black;
+	font-style: bold;
+	font-size: 25px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.flex-article{
+	flex-basis: 70%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	margin: 5px;
+	column-count: 5;
+	column-width: 300px;
+}
+
+.articleimg {
+	float: left;
+	margin: 5px;
+	max-width: 150px;
+	max-height: 200px;
+}
+
+.pulledquote{
+	font-family: 'Zen Antique Soft', serif;
+	font-size: 20px;
+	max-width: 100px;
+	float: right;
+	margin: 5px;
+	color: red;
+}
+
+footer{
+	text-align: center;
+	font-size: 25px;
+	font-style: bold;
+}
