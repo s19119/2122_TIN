@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>4h</h1>
+
+<script>
+    function secondLowestAndGreatest(arr){
+        let aux = arr;
+        const len = aux.length;
+        for(let i = 1; i < len; i++){
+            let j = i;
+            let temp = aux[i];
+
+            while((j > 0) && (temp < aux[j - 1])){
+                aux[j] = aux[j - 1];
+                j--;
+            }
+            aux[j] = temp;
+        }
+        let secondLowest, seconGreatest;
+        if(len > 2){
+            secondLowest = aux[1];
+            secondGreatest = aux[len - 2];
+        }
+        else if(len == 2){
+            secondLowest = aux[1];
+            secondGreatest = aux[0];
+        }
+        else{
+            secondLowest = aux[0];
+            secondGreatest = aux[0];
+        }
+        console.log('Array: ' + arr + ' Second lowest: ' + secondLowest + ', second greatest: ' + secondGreatest);
+    }
+
+    secondLowestAndGreatest([0,1,2,5,8,9,2]);
+    secondLowestAndGreatest([1,5]);
+    secondLowestAndGreatest([6]);
+</script>
+
+</body>
+</html> 

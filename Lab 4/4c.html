@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>4c</h1>
+
+<script>
+    function isPalindrome(word){
+        const len = word.length;
+        for(let i = 0; i  < len/2; i++){
+            if(word[i] !== word[len - i - 1]){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    console.log('Is car a palindrome: ' + isPalindrome('car'));
+    console.log('Is racecar a palindrome: ' + isPalindrome('racecar'));
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>4e</h1>
+
+<script>
+    function longestWord(str){
+        let arr = str.split(' ');
+        let longestWord = arr[0];
+        for(let i = 1; i < arr.length; i++){
+            if(longestWord.length < arr[i].length){
+                longestWord = arr[i];
+            }
+        }
+        return longestWord;
+    }
+    console.log('Longest word in: \'No escape from reality\' is: ' + longestWord('No escape from reality'));
+</script>
+
+</body>
+</html> 

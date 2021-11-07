@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>4d</h1>
+
+<script>
+    function alphabeticOrder(word){
+        let wordCopy = word.split('');
+        const len = wordCopy.length;
+        for(let i = 1; i < len; i++){
+            let j = i;
+            let temp = wordCopy[i];
+
+            while((j > 0) && (temp < wordCopy[j - 1])){
+                wordCopy[j] = wordCopy[j - 1];
+                j--;
+            }
+            wordCopy[j] = temp;
+        }
+        return wordCopy.join('');
+    }
+    console.log('tractor in alphabetical order is: ' + alphabeticOrder('tractor'));
+</script>
+
+</body>
+</html> 

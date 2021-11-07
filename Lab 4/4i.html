@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>4i</h1>
+
+<script>
+    function amountToCoins(amount, coins){
+        const converted = [];
+        let auxAmount = amount;
+        for(let i = 0, j = 0; auxAmount > 0;){
+            if((auxAmount - coins[j]) >= 0){
+                converted[i] = coins[j];
+                auxAmount -= coins[j];
+                i++;
+            }
+            else{
+                j++;
+            }
+        }
+        return converted;
+    }
+    console.log(amountToCoins(46,[25,10,5,2,1]));
+    console.log(amountToCoins(100,[15,3,1]));
+</script>
+
+</body>
+</html> 

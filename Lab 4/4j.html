@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>4j</h1>
+
+<script>
+    function binarySearch(arr,key){
+        let l = 0;
+        let len = arr.length;
+        let r = len - 1;
+        while(l <= r){
+            let m = (l+r)/2;
+            if(arr[m] == key){
+                return m;
+            } 
+            
+            if(arr[m] > key){
+                r = m - 1;
+            }
+            else{
+                l = m + 1;
+            }
+        }
+        return -1;
+    }
+
+    console.log('Index of 5 in: [0,1,2,5,6,20,100]: ' + binarySearch([0,1,2,5,6,20,100], 5));
+    console.log('Index of 3 in: [0,1,2,5,6,20,100]: ' + binarySearch([0,1,2,5,6,20,100], 3));
+</script>
+
+</body>
+</html> 
