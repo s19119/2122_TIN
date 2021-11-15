@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>5a</h1>
+
+<script>
+    function printProperties(object){
+        console.log('Property 1: ' + object.field1 + ' of type: ' + typeof object.field1);
+        console.log('Property 2: ' + object.field2 + ' of type: ' + typeof object.field2);
+        console.log('Property 3: ' + object.field3 + ' of type: ' + typeof object.field3);
+        console.log('Property 4: ' + object.setProperty1 + ' of type: ' + typeof object.setProperty1);
+        console.log('Property 5: ' + object.speak + ' of type: ' + typeof object.speak);
+        console.log('Property 6: ' + object.add + ' of type: ' + typeof object.add);
+    }
+
+    let o = {
+        field1: 'field1', 
+        field2: 2, 
+        field3: true,
+        setProperty1(value){
+            field1 = value;
+        },
+        speak(){
+            return 'hello';
+        },
+        add(number1, number2){
+            return number1+number2;
+        }
+    };
+
+    printProperties(o);
+</script>
+
+</body>
+</html> 

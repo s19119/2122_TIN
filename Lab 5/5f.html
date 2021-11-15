@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>5f</h1>
+
+<script>
+    class Person{
+        constructor(firstName, lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+        get fullName(){
+            return this.firstName + ' ' + this.lastName;
+        }
+        set fullName(name){            
+            let words = name.split(' ');
+            this.firstName = words[0] || '';
+            this.lastName = words[1] || '';
+        }
+    }
+    class Student extends Person{
+        constructor(firstName,lastName,id, grades){
+            super(firstName,lastName);
+            this.id = id;
+            this.grades = grades;
+        }
+        printStudent(){
+            let sum = 0;
+            for(let i = 0; i < this.grades.length; i++){
+                sum+=this.grades[i];
+            }
+            const avg = sum/this.grades.length;
+            console.log(this.firstName + ' ' + this.lastName + ' has a grade average of ' + avg);
+        }
+        get avg(){
+            let sum = 0;
+            for(let i = 0; i < this.grades.length; i++){
+                sum+=this.grades[i];
+            }
+            const avg = sum/this.grades.length;
+            return avg;
+        }
+    }
+    let student = new Student('John', 'Smith', 1, [2,4,5,3,2]);
+    student.printStudent();
+    console.log('Grade average: ' + student.avg + ' ' + student.fullName);
+    student.fullName = 'Jane Doe';
+    console.log(student.fullName);
+
+</script>
+
+</body>
+</html> 

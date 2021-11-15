@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>5c</h1>
+
+<script>
+    const Student = {listOfCourses: ['TIN','ZPR','BYT','GRK']};
+
+    function createStudent(firstName,lastName,id){
+        var student1 = Object.create(Student);
+        student1.firstName = firstName;
+        student1.lastName = lastName;
+        student1.id = id;
+        return student1;
+    }
+    var student1 = createStudent('John', 'Smith', 1); 
+    console.log(student1.firstName + ' ' + student1.lastName + ' ' + student1.listOfCourses);
+</script>
+
+</body>
+</html> 

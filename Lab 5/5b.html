@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>5b</h1>
+
+<script>
+    function Student(firstName, lastName, id, grades){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.id = id;
+        this.grades = grades;
+        this.printStudent = function(){
+            let sum = 0;
+            for(let i = 0; i < grades.length; i++){
+                sum+=grades[i];
+            }
+            const avg = sum/grades.length;
+            console.log(firstName + ' ' + lastName + ' has a grade average of ' + avg);
+        }
+    };
+
+    let student = new Student('John', 'Smith', 1, [2,4,5,3,2]);
+    student.printStudent();
+</script>
+
+</body>
+</html> 
