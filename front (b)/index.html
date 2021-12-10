@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment 9</title>
+    </head>
+    <body>
+        <form>
+            <label for="Param1">Parameter 1:</label><br>
+            <input type="number" step="0.01" id="Param1" name="Param1"><br>
+            <label for="Param2">Parameter 2:</label><br>
+            <input type="number" step="0.01" id="Param2" name="Param2"><br>
+            <label for="OperationCode">Select your desired operation</label>
+            <select name="OperationCode" id="OperationCode">
+                <option value=0>Addition</option>
+                <option value=1>Subtraction</option>
+                <option value=2>Multiplication</option>
+                <option value=3>Division</option>
+            </select>
+            <button type="button" onclick="calculateResult()">Calculate result</button>
+        </form>
+        <p>Result:</p>
+        <p id="Result"></p>
+    </body>
+    <script>
+        function calculateResult(){
+    let param1 = document.getElementById("Param1").value;
+    let param2 = document.getElementById("Param2").value;
+    let opCode = document.getElementById("OperationCode").value;
+    let url = "http://localhost:3000/calculate";
+    if(window.XMLHttpRequest){
+        let xhr = new XMLHttpRequest();         
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = 
+            function(){
+                try{
+                    var done = 4,
+                    ok = 200;
+                    if(xhr.readyState == done && xhr.status == ok){
+                        console.log(xhr.responseText);
+                        let jsonResponse = JSON.parse(xhr.responseText);
+                        document.getElementById("Result").innerHTML = jsonResponse.Result;
+                    }
+                }
+                catch(err){
+                    console.log(err);
+                }
+            };
+        let jsonData = {Param1 : param1, Param2 : param2, OperationCode : opCode};
+        console.log(jsonData);       
+        xhr.send(JSON.stringify(jsonData));
+        console.log(JSON.stringify(jsonData));
+    }
+    else if(window.ActiveXObject){
+        let xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = 
+            function(){
+                try{
+                    var done = 4,
+                    ok = 200;
+                    if(xhr.readyState == done && xhr.status == ok){
+                        console.log(xhr.responseText);
+                        let jsonResponse = JSON.parse(xhr.responseText);
+                        document.getElementById("Result").innerHTML = jsonResponse.Result;
+                    }
+                }
+                catch(err){
+                    console.log(err);
+                }
+            };
+        let jsonData = {Param1 : param1, Param2 : param2, OperationCode : opCode};
+        console.log(jsonData);       
+        xhr.send(JSON.stringify(jsonData));
+        console.log(JSON.stringify(jsonData));
+    }
+}
+    </script>
+</html>
