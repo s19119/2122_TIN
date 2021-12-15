@@ -1,0 +1,48 @@
+.gridcontainers {
+    display : grid;
+    justify-content: space-evenly;
+    grid-template-columns: 300px 300px;
+}
+
+.buttons {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 100px 100px;
+}
+
+select {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    margin: auto;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+    margin-left: 10px;
+}
+
+form {
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: lemonchiffon;
+    border-style: ridge;
+}
+
+.result {
+    padding: 20px 20px 20px 20px;
+    font-size: 30px;
+    color: green;
+    border-style: solid;
+    border-color: lemonchiffon;
+    border-radius: 5px;
+}
+
+body {
+    background-color: darkgray;
+    padding: 10px;
+    border-style: solid;
+    border-color: wheat;
+}

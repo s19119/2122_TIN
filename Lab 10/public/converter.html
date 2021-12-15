@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/> 
+        <link rel="stylesheet" href="converter.css">
+        <title>Converter</title>                
+        <script defer src="bundle.js"></script>
+    </head>
+    <body>
+        <div class="gridcontainers">
+            <form>
+                <label for="temperature">Enter temperature</label>
+                <input type="number" step="0.01" id="temperature" name="temperature"><br>
+                <label for="originTemp">Select temperature you wish to convert from</label>
+                <select id="originTemp" name="originTemp">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                </select><br>
+                <label for="targetTemp">Select temperature you wish to convert to</label>
+                <select id="targetTemp" name="targetTemp">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                </select>
+            </form>  
+            <form>
+                <label for="distance">Enter distance</label>
+                <input type="number" step="0.01" id="distance" name="distance"><br>
+                <label for="originDistance">Select distance you wish to convert from</label>
+                <select id="originDistance" name="originDistance">
+                    <option value="miles">Miles</option>
+                    <option value="kilometres">Kilometres</option>
+                </select><br>
+                <label for="targetDistance">Select distance you wish to convert to</label>
+                <select id="targetDistance" name="targetDistance">
+                    <option value="miles">Miles</option>
+                    <option value="kilometres">Kilometres</option>
+                </select>
+            </form>
+        </div>              
+        <div id="buttons" class="gridcontainers">                            
+            <button type="button" id="buttonTemp">Convert temperature</button>
+            <button type="button" id="buttonDistance">Convert distance</button>
+        </div>
+        <div class="gridcontainers">
+            <p id="resultTemp" class="result"></p>
+            <p id="resultDistance" class="result"></p>
+        </div>
+    </body>
+</html>
